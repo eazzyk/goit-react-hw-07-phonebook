@@ -21,9 +21,9 @@ const App = () => {
     <div className={css.container}>
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
-      {isLoading && !error && <b>Please, wait...</b>}
       <h2 className={css.title}>Contacts</h2>
       {contacts.length >= 1 && <Filter />}
+      {isLoading && !error && <p className={css.loading}>Please, wait...</p>}
       {contacts.length > 0 ? <ContactList /> : <p>Your phonebook is empty. Please add contact.</p>}
     </div>
   );
