@@ -19,7 +19,7 @@ export const useContacts = () => {
   };
 
   const removeContact = id => {
-    dispatch(contactsOperations.removeContact(id));
+    dispatch(contactsOperations.deleteContact(id));
   };
 
   const setFilter = filter => {
